@@ -6,8 +6,8 @@
 
   **Скриншот рабочего окна приложения:**
   ----------------------------------------
- ![image](![image](https://github.com/Brodyaga44/laba2/assets/145764043/2b333fa4-4b2f-41e8-9beb-cc9477f66e34)
-)
+ ![image](https://github.com/Brodyaga44/laba2/assets/145764043/2b333fa4-4b2f-41e8-9beb-cc9477f66e34)
+
 
 **Разбор части кода на примере класса HelloController**
 ```
@@ -35,8 +35,8 @@
 ## Архитектура
 > Диаграмма классов:
 
-![image](![imagetest](https://github.com/Brodyaga44/laba2/assets/145764043/ae0783de-b0b3-4cc8-884b-9036b145861e)
-)
+![imagetest](https://github.com/Brodyaga44/laba2/assets/145764043/ae0783de-b0b3-4cc8-884b-9036b145861e)
+
 ## Завсимости
 Для работы данного приложежния необходимы JavaFX и JDK 20.
 
