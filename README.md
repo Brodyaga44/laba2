@@ -1,58 +1,42 @@
-# BMI  Calculator
->  Описание: В ходе данной работы был разработан калькулятор **[ИМТ](https://en.wikipedia.org/wiki/Body_mass_index)** (Индекс массы тела).
+# Iterator
+>  Описание: В ходе данной работы был разработан  **Iterator**.
 - Технологический стек: Java
-- Статус: 1.7.2.
+- Статус: 1.2
 - По сравнению с другими подобными продуктами, данная разработка отличается интуитивно понятным интерфейсом.
 
   **Скриншот рабочего окна приложения:**
   ----------------------------------------
- ![image](https://github.com/Brodyaga44/Task1/assets/145764043/f684ff0a-41f3-4832-aec4-e30ef2744741)
+ ![image](![image](https://github.com/Brodyaga44/laba2/assets/145764043/2b333fa4-4b2f-41e8-9beb-cc9477f66e34)
+)
 
-**Разбор части кода на примере класса BMI**
+**Разбор части кода на примере класса HelloController**
 ```
-public class BMI {
-    private float weight;
-    private float height;
-    public BMI() {
-        this.height = 0;
-        this.weight = 0;
-    }
-    public BMI(float BodyHeight, float BodyMass) {
-        this.height = BodyHeight;
-        this.weight = BodyMass;
-    }
-    public float calculate()
-    {
-        return this.weight/this.height/this.height*10000;
-    }
-    public String diagnosis(){
-        if (18.5 <= calculate() &&  calculate() < 25)
-        {
-            return "Вывод: Ваш ИМТ в норме";
+@FXML
+    public void onLastClick(){
+        if (iterator.hasPreview()) imageView.setImage(iterator.preview());
+        else {
+            while(iterator.hasNext()) {
+                iterator.next();
+            }
+            iterator.preview();
+            imageView.setImage(iterator.next());
         }
-        else if (calculate() < 25) {
-            return "Вывод: У Вас нехватка веса";
-        }
-        else if (18.5 <= calculate()) {
-            return "Вывод: У Вас избыток веса";
-        }
-        return null;
     }
-
-    @Override
-    public String toString() {
-        return "BMI{" +
-                "weight=" + this.weight +
-                ", height=" + this.height +
-                '}';
+    @FXML
+    public void onNextClick(){
+        if (iterator.hasNext()) imageView.setImage(iterator.next());
+        else {
+            iterator = foto.getIterator();
+            imageView.setImage(iterator.next());
+        }
     }
-}
 ```
 ------------------------
 ## Архитектура
 > Диаграмма классов:
 
-![image](https://github.com/Brodyaga44/Task1/assets/145764043/2146c4d0-a464-4f38-a00f-69d49dccbcad)
+![image](![imagetest](https://github.com/Brodyaga44/laba2/assets/145764043/ae0783de-b0b3-4cc8-884b-9036b145861e)
+)
 ## Завсимости
 Для работы данного приложежния необходимы JavaFX и JDK 20.
 
@@ -63,15 +47,11 @@ public class BMI {
 Не требуется
 
 ## Применение
-> Для работы с ним требуется указать некоторые *параметры*:
-1. Массу тела м
-2. Рост H
-Исходя из полученных значений, подставленных в формулу **bmi = M/H^2**
-Получается результат, который сравнивается с данной таблицей
-![BMI](https://fizkultura-fgos.ru/wp-content/uploads/0/4/6/0466c04ae9068a1154f5e89d80bf3968.png)
-
-## Проверка ПО
-Не предусмотрена
+> Для работы с ним требуется поместить фотографии для слайд шоу в папку  *resourses* внутир проекта
+1. Кнопка *слайдшоу* - начинает показ анимации
+2. Кнопка *стоп слайдшоу* - останавливает
+3. Кнопка вперед - включает следующее фото
+4. кнопка назад - включает предыдущее фото
 
 ## Проблемы
 Плохой дизайн
@@ -83,7 +63,7 @@ public class BMI {
 В дальнейшем предполагается передаботка действующего дизайна интерфейса
 
 ## Источники и справочники
-- [Что такое BMI?](https://ru.wikipedia.org/wiki/Индекс_массы_тела)
+- [Что такое Iterator?]([https://ru.wikipedia.org/wiki/Индекс_массы_тела](https://ru.wikipedia.org/wiki/Итератор))
 - [Образовательная платформа Stepik](https://stepik.org/learn)
 
 //ссылка, картинка, кусок кода, диаграмма классов
