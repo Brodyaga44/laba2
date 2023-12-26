@@ -66,4 +66,3 @@
 - [Что такое Iterator?](https://ru.wikipedia.org/wiki/Итератор)
 - [Образовательная платформа Stepik](https://stepik.org/learn)
 
-//ссылка, картинка, кусок кода, диаграмма классов
